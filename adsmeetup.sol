@@ -1,29 +1,28 @@
 pragma solidity ^0.4.18;
 
+
 contract ADSMeetup {
-  mapping (bytes32 => uint8) public adsCredits;
   bytes32[] public candidateList;
 
-  function ADSMeetup(bytes32[] candidateNames) public {
-    candidateList = candidateNames;
+  function ADSMeetup() public {
   }
 
-  function totalVotesFor(bytes32 candidate) view public returns (uint8) {
-    require(validCandidate(candidate));
-    return adsCredits[candidate];
-  }
+  function bytesToAddress(bytes32 _address) public returns (address) {
+    uint160 m = 0;
+    uint160 b = 0;
 
-  function voteForCandidate(bytes32 candidate) public {
-    require(validCandidate(candidate));
-    adsCredits[candidate] += 1;
-  }
-
-  function validCandidate(bytes32 candidate) view public returns (bool) {
-    for(uint i = 0; i < candidateList.length; i++) {
-      if (candidateList[i] == candidate) {
-        return true;
-      }
+    for (uint8 i = 0; i < 20; i++) {
+      m *= 256;
+      b = uint160(_address[i]);
+      m += (b);
     }
-    return false;
+
+    return address(m);
   }
+  
+  function attend(bytes32 walletid) public {
+	address walletaddr = bytesToAddress(walletid);
+	walletaddr.transfer(1);
+  }
+
 }
