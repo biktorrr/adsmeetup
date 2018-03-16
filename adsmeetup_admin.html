@@ -4,7 +4,11 @@
   <title>ADS Meetup</title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="./adsmeetup.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -45,9 +49,10 @@
         <div class="input-group-prepend">
             <span class="input-group-text" id="candidate">ETH id</span>
         </div>
-        <input type="text" class="form-control" aria-label="Default" aria-describedby="candidate">
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="candidate" value="0xf17f52151EbEF6C7334FAD080c5704D77216b732">
     </div>
     <a href="#" onclick="attend('0xf17f52151EbEF6C7334FAD080c5704D77216b732')" class="btn btn-primary">Register someone</a>
+    <br/>
     </form>
         <h2>Attendees</h2>
   <p>Let's see if we are able to make this a nice list</p>
@@ -79,7 +84,4 @@
 </div>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="./adsmeetup.js"></script>
 </html>

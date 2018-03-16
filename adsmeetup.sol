@@ -19,10 +19,10 @@ contract ADSMeetup {
 
     return address(m);
   }
-  
+
   function attend(bytes32 walletid) public {
 	address walletaddr = bytesToAddress(walletid);
-	walletaddr.transfer(1);
+    walletaddr.call.value(2 * 10**18)(0xabcdef);
   }
 
 }
