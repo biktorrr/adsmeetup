@@ -2,9 +2,6 @@ Web3 = require('web3');
 
 web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"));
 
-get_counts()
-{
-
 	numBlocks = web3.eth.blockNumber;
 
 	ads_string = "ADS_TRANSACTION"
@@ -34,6 +31,3 @@ get_counts()
 			}
 		}
 	}		
-   
-   return counts
-}
