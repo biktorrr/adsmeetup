@@ -34,10 +34,22 @@
 <div class="container">
 
   <h2>Register someone</h2>
-  Name: <input type="text" id="name" value="Peter"/> <br/>
-  ETH id: <input type="text" id="candidate" value="0xf17f52151EbEF6C7334FAD080c5704D77216b732"/>
-  <a href="#" onclick="attend('0xf17f52151EbEF6C7334FAD080c5704D77216b732')" class="btn btn-primary">Register someone</a>
-  <h2>Attendees</h2>
+    <form>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="name">Name</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="name">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="candidate">ETH id</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="candidate">
+    </div>
+    <a href="#" onclick="attend('0xf17f52151EbEF6C7334FAD080c5704D77216b732')" class="btn btn-primary">Register someone</a>
+    </form>
+        <h2>Attendees</h2>
   <p>Let's see if we are able to make this a nice list</p>
   <ul class="list-group">
     <li class="list-group-item d-flex justify-content-between align-items-center">
